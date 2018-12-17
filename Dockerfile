@@ -1,5 +1,6 @@
 FROM node:10.14.1-alpine
-COPY package*.json .
+WORKDIR /opt
+COPY package*.json ./
 RUN npm install &&\
     apk update &&\
     apk upgrade
